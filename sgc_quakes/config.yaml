@@ -1,8 +1,9 @@
 name: "SGC Quakes Colombia"
 description: "Real-time earthquake monitoring for Colombia using official data from Servicio Geológico Colombiano (SGC)."
-version: "1.0.1"
+version: "1.0.2"
 slug: "sgc_quakes"
 url: "https://github.com/lordvault/sgc_quakes"
+init: false
 arch:
   - aarch64
   - amd64
