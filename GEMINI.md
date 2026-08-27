@@ -16,6 +16,7 @@ sgc_quakes/ (Repository Root)
 ├── .gitignore
 ├── repository.yaml          <-- REQUIRED for Home Assistant Add-on Store
 ├── README.md                <-- GitHub README with installation instructions & automation examples
+├── CHANGELOG.md             <-- Root changelog for GitHub
 ├── GEMINI.md                <-- Workspace context for AI agents
 └── sgc_quakes/              <-- Add-on directory
     ├── config.yaml          <-- Add-on metadata and configuration schema
@@ -23,6 +24,9 @@ sgc_quakes/ (Repository Root)
     ├── Dockerfile           <-- Alpine-based container specification
     ├── run.sh               <-- S6-overlay entrypoint script
     ├── app.py               <-- Polling daemon and Home Assistant REST bridge
+    ├── icon.png             <-- Add-on icon (512x512) for Home Assistant UI
+    ├── logo.png             <-- Add-on logo for Home Assistant UI
+    ├── CHANGELOG.md         <-- Add-on changelog tab for Home Assistant UI
     └── DOCS.md              <-- Add-on documentation tab for Home Assistant UI
 ```
 

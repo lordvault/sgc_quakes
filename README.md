@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="sgc_quakes/icon.png" width="128" height="128" alt="SGC Quakes Colombia Icon">
+</p>
+
 # SGC Quakes Colombia 🇨🇴 — Home Assistant Add-on
 
 [![Open your Home Assistant instance and show the add-on store with a specific repository configured.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Flordvault%2Fsgc_quakes)
