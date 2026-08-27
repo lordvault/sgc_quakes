@@ -1,6 +1,6 @@
 name: "SGC Quakes Colombia"
 description: "Real-time earthquake monitoring for Colombia using official data from Servicio Geológico Colombiano (SGC)."
-version: "1.0.2"
+version: "1.0.3"
 slug: "sgc_quakes"
 url: "https://github.com/lordvault/sgc_quakes"
 init: false
@@ -16,6 +16,7 @@ options:
   poll_interval: 45
   min_magnitude: 2.5
   max_distance_km: 0
+  max_event_age_minutes: 60
   home_latitude: 0.0
   home_longitude: 0.0
   fetch_home_from_ha: true
@@ -24,6 +25,7 @@ schema:
   poll_interval: int(15,300)
   min_magnitude: float(0.0,10.0)
   max_distance_km: int(0,5000)
+  max_event_age_minutes: int(0,1440)
   home_latitude: float(-90.0,90.0)?
   home_longitude: float(-180.0,180.0)?
   fetch_home_from_ha: bool

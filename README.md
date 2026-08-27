@@ -62,6 +62,7 @@ In the Add-on's **Configuration** tab, you can adjust the following options:
 | `poll_interval` | Integer | `45` | Polling frequency in seconds (between 15 and 300). |
 | `min_magnitude` | Float | `2.5` | Minimum magnitude to trigger events and updates (0.0 to 10.0). |
 | `max_distance_km` | Integer | `0` | Max distance in km from your home. Set to `0` to monitor all events across Colombia. |
+| `max_event_age_minutes` | Integer | `60` | Maximum age of earthquake in minutes to trigger real-time alert events (prevents alerts for retroactive events). Set to `0` for no limit. |
 | `fetch_home_from_ha` | Boolean | `true` | Automatically fetch home coordinates from `zone.home`. |
 | `home_latitude` | Float | `0.0` | Manual latitude (used if `fetch_home_from_ha` is `false`). |
 | `home_longitude` | Float | `0.0` | Manual longitude (used if `fetch_home_from_ha` is `false`). |

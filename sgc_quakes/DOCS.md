@@ -9,6 +9,7 @@ Real-time earthquake monitoring for Colombia using data provided directly by the
 | `poll_interval` | Integer | `45` | Polling frequency in seconds (between 15 and 300 seconds). |
 | `min_magnitude` | Float | `2.5` | Minimum magnitude threshold to trigger notifications and updates (0.0 - 10.0). |
 | `max_distance_km` | Integer | `0` | Maximum distance (in km) from home coordinates. Set to `0` to monitor all events across Colombia. |
+| `max_event_age_minutes` | Integer | `60` | Maximum age of earthquake in minutes to trigger real-time alert events. Prevents sirens/notifications when SGC publishes historical/retroactive events hours or days later. Set to `0` to disable age limit. |
 | `fetch_home_from_ha` | Boolean | `true` | Automatically fetch latitude & longitude from `zone.home` in Home Assistant. |
 | `home_latitude` | Float | `0.0` | Optional manual latitude (used if `fetch_home_from_ha` is `false`). |
 | `home_longitude` | Float | `0.0` | Optional manual longitude (used if `fetch_home_from_ha` is `false`). |
@@ -34,12 +35,13 @@ Real-time earthquake monitoring for Colombia using data provided directly by the
   * `event_id`: Unique SGC event identifier.
 
 ### 2. Event: `sgc_earthquake_detected`
-Fires on the Home Assistant Event Bus whenever a new earthquake meets your magnitude and distance filters.
+Fires on the Home Assistant Event Bus whenever a new earthquake meets your magnitude and distance filters within the `max_event_age_minutes` threshold.
 
 #### Event Data Payload:
 ```json
 {
   "id": "SGC2026quikpc",
+  "event_id": "SGC2026quikpc",
   "magnitude": 5.1,
   "place": "Los Santos - Santander, Colombia",
   "depth_km": 149.0,
